@@ -54,9 +54,9 @@ default: '1234'
 
 All documentation will be handled by [Yard][2] and using the default markup at this time. A brief introduction to Yard markup can be found [here][3]. All scripts should have as much documentation coverage as possible, ideally 100%.  You can test your coverage by installing Yard locally and running
 
-{% highlight bash %}
+```bash
 rake yard
-{% endhighlight %}
+```
 
 Documentation can always be made better, if you would like to contribute to it, have at it and submit a PR.
 
@@ -104,7 +104,7 @@ Currently we have RSpec3 as a [test framework][9]. Please add coverage for your 
 
 You can use the included Vagrantfile for easy testing.  All necessary versions of Ruby can be installed with their own dedicated gem sets using RVM.  Just boot up the machine and drop into /vagrant and execute
 
-```ruby
+```bash
 rake default
 ```
 
