@@ -8,13 +8,13 @@ There are big plans in store for the sensu-plugins.  Not just in terms of code b
 
 Sensu itself is a framework and the plugins are just one piece of it.  Many of the companies that use Sensu have created custom workflows, checks, and handlers, then open sourced them.  These could solve another user's problem but if the user doesn't know about them it won't do them any good.
 
-The thought here is to have a central location where other companies and individuals can list their code for all to use.  There would be few conditions surrounding this and it will give people a chance to see how others have implemented or modified existing solutions.  These companies wouldn't have to go through the PR process as they would be considered unoffical, externally maintained projects, and they would retain full control of the code, yet be able to share it and get greater feedback.  There are are lot of things to still work out and think but its on the table.
+The thought here is to have a central location where other companies and individuals can list their code for all to use.  There would be few conditions surrounding this and it will give people a chance to see how others have implemented or modified existing solutions.  These companies wouldn't have to go through the PR process as they would be considered unoffical, externally maintained projects, and they would retain full control of the code, yet be able to share it and get greater feedback.  There are are lot of things to still work out and think about but its on the table.
 
 ### Planned Features
 
 **Arch Independent Code**
 
-One of the big pushed will be for arch independent code.  A short coming of other major monitoring solutions is the lack of real platform independence.  This is a high priority and is something that is always in consideration.  Many of the disk and process checks have already been refactored to achieve this and more are in progress.
+One of the big pushes will be for arch independent code.  A short coming of other major monitoring solutions is the lack of real platform independence.  This is a high priority and is something that is always in consideration.  Many of the disk and process checks have already been refactored to achieve this and more are in progress.
 
 There will always be platform dependent checks such as linux kernel monitors or Windows event monitors but the more the number of these can be reduced the better.
 
