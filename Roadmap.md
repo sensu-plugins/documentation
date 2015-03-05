@@ -12,7 +12,7 @@ The thought here is to have a central location where other companies and individ
 
 ### Planned Features
 
-**Arch Independent Code **
+**Arch Independent Code**
 
 One of the big pushed will be for arch independent code.  A short coming of other major monitoring solutions is the lack of real platform independence.  This is a high priority and is something that is always in consideration.  Many of the disk and process checks have already been refactored to achieve this and more are in progress.
 
