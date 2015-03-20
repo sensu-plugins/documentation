@@ -21,4 +21,8 @@ All tests need to pass in Travis before any of the following steps should be tak
 1. Create a gem with the new version  (Travis will do this for you upon a tag commit at some point)
 1. Push the gem to rubygems  (Travis will do this for you upon a tag commit at some point)
 
+### Notes
+
 Try to avoid merge commits when possible, you should always be rebasing `git pull --rebase` or however your workflow and tools reccomend you do this.
+
+In oder to build gems you will need the signing keys and in oder to push to Rubygems you will need to account creds 
