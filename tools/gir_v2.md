@@ -20,7 +20,7 @@ The public cookbooks are a great starting place but where necessary they may nee
 
 #### Gir
 
-Gir is a chef repo and contains the base Berksfile from which the other repo's pull from and also a set of roles and several cookbooks.  These roles will be used to configure a base development environment for a specific OS.  For example in the base role for each OS there are recipes that contain lists of packages to install for various OS's.
+Gir is a chef repo and contains the base Berksfile from which the other repo's pull,  a set of roles, and several cookbooks.  These roles are used to configure a base development environment for any supported OS.
 
 ### What you get
 
@@ -47,14 +47,14 @@ Currently freebsd uses the system ruby and the additional gems are not installed
 * [vagrant-berkshelf](https://github.com/berkshelf/vagrant-berkshelf)
 * [vagrant-omnibus](https://github.com/chef/vagrant-omnibus)
 
-**Note** I am aware that vagrant-berkshelf is no longer supported and will most likely not work past Berkshelf 3.x.  At some point we will look at using kitchen but for now this works just fine and the converge times are much shorter.
+**Note** We are aware that vagrant-berkshelf is no longer supported and will most likely not work past Berkshelf 3.x.  At some point we will look at using kitchen but for now this works just fine and the converge times are much shorter.
 
 ### Installation
 
 * install [ChefDk](https://downloads.chef.io/chef-dk/)
 * install [vagrant-berkshelf](https://github.com/berkshelf/vagrant-berkshelf) plugin
 * install [vagrant-omnibus](https://github.com/chef/vagrant-omnibus) plugin
-* clone [GIR](https://github.com/sensu-plugins/GIR/) to ../sensu-plugins **PROJECT_ROOT**
+* clone [GIR](https://github.com/sensu-plugins/GIR/) to ../sensu-plugins, this will be your **PROJECT_ROOT**
 
 ### Usage
 
@@ -63,7 +63,9 @@ Currently freebsd uses the system ruby and the additional gems are not installed
 Currently supported OS's are:
 
 * Cent[5,6,7]
+ 
 * FreeBSD[9,10]
+
 * Ubuntu[12,14]
 
 1. Clone a sensu-plugins repo to your **PROJECT_ROOT**
