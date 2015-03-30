@@ -1,10 +1,10 @@
-** Sensu-Plugin Org Guidelines
+## Sensu-Plugin Org Guidelines
 
-*** Overview
+### Overview
 
-*** Infrastructure
+### Infrastructure
 
-**** Github
+#### Github
 
 GIthub and the issues and milestone within it are the primary way the project is managed.  All plugin repositories are created from a standard template using a rake task to ensure that they remain consistent and manageable at an organization level.  There are currently five teams in the org:
 
@@ -14,19 +14,19 @@ GIthub and the issues and milestone within it are the primary way the project is
 * Core Infra - write access to sensu-plugin, sensu-plugin-spec, GIR, sensu-plugin.github.io
 * Documentation - write access to the documentation repo
 
-**** Trello
+#### Trello
 
 There is a public Trello [organization](https://trello.com/sensuplugins) that have several boards used for communicating various project wide items.  This is still a thought process but it works for now.  Ideas are always welcome, join a board and open a card.
 
-**** [sensu-plugin.github.io](http://sensu-plugins.github.io/)
+#### [sensu-plugin.github.io](http://sensu-plugins.github.io/)
 
 This is our temporary home time a more robust one can be created.
 
 
-*** Policies
+### Policies
 
 This is a volunteer project and as such contributors are free to come and go.  No one is required to do any amount of work to continue as a contributors, some days you may do a ton of work or you may be in vacation or doing a job that pays the bills for a few weeks.  No worries.
 
-****Organization access****
+**Organization access**
 
 This is a public organization and as such anyone may join the only requirements are a firm belief in treating your infrastructure as code and 2FA on your github account.  The rest is up for debate. :)
