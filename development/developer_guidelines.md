@@ -60,6 +60,10 @@ rake yard
 
 Documentation can always be made better, if you would like to contribute to it, have at it and submit a PR.
 
+### Changelog
+
+The change log should follow the format listed [here](http://keepachangelog.com/).
+
 ## Dependency Management
 
 Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin/handler file.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  If you have questions about using a specific gem feel free to ask.
