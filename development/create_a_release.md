@@ -5,9 +5,7 @@ All tests need to pass in Travis before any of the following steps should be tak
 
 ### Testing
 
-1. Pull the repo locally and build the gem `gem build <gemspec>`
-1. Launch the included vagrant box `vagrant up`
-1. For each supported version of ruby install the gem and verify that it was a clean install and all dependencies are resolved
+1. Pull the repo locally and build the gem `gem build <gemspec>` and make sure it builds without errors.
 1. Exit out of the vagrant box and cleanup `vagrant destroy --force`
 
 ### Create A Release
@@ -25,4 +23,4 @@ All tests need to pass in Travis before any of the following steps should be tak
 
 Try to avoid merge commits when possible, you should always be rebasing `git pull --rebase` or however your workflow and tools reccomend you do this.
 
-In oder to build gems you will need the signing keys and in oder to push to Rubygems you will need to account creds 
+In order to build gems you will need the signing keys and in order to push to Rubygems you will need to account creds 
