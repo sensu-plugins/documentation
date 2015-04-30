@@ -1,18 +1,18 @@
 # Sensu-Plugin Developer Guidelines
 
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+**Table of Contents**
 
 - [Naming Conventions](#naming-conventions)
-- [Coding Style](##coding-style)
-- [Copyright and Licensing](#)
-- [Documentation](#)
-	- [Changelog](#)
-- [Dependency Management](#)
-- [Dependency Management](#)
-- [Issue and Pull Request Submissions](#)
-- [Gem Metadata](#)
-	- [Additional Information](#)
-  
+- [Coding Style](#coding-style)
+- [Copyright and Licensing](#copyright-and-licensing)
+- [Documentation](#documentation)
+	- [Changelog](#changelog)
+- [Dependency Management](#dependency-management)
+- [Dependency Management](#dependency-management)
+- [Issue and Pull Request Submissions](#issue-and-pull-request-submissions)
+- [Gem Metadata](#gem-metadata)
+- [Additional Information](#additional-information)
+
 ## Naming Conventions
 - All binaries should start with either **handler**, **check**, **metrics**, **extension**, or **mutator** depending on their primary function.  This is done to ensure that a user can tell from the command what the primary action of the script is.  It also makes things easier for infrastructure tools.
 - The name's of scripts should use dashes to separate words and contain an extension (`.rb`, `.sh`, etc).  Extensions are unfortunately necessary for Sensu to be able to directly exec plugins and handlers on Windows.  All scripts should also be made executable using `chmod +x plugin` or a similar method.  There is a rake task that is run by Travis that will automatically make all files in _/bin_ executable if this is not done.
@@ -74,9 +74,6 @@ rake yard
 
 ### Changelog
 The change log should follow the format listed [here](http://keepachangelog.com/).
-
-## Dependency Management
-Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin/handler file.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  If you have questions about using a specific gem feel free to ask.
 
 ## Dependency Management
 Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  Questions about using a specific gem feel can be opened as issues on Github or feel free to ask the mailing list.
