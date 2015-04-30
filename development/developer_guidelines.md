@@ -8,7 +8,6 @@
 - [Documentation](#documentation)
 	- [Changelog](#changelog)
 - [Dependency Management](#dependency-management)
-- [Dependency Management](#dependency-management)
 - [Issue and Pull Request Submissions](#issue-and-pull-request-submissions)
 - [Gem Metadata](#gem-metadata)
 - [Additional Information](#additional-information)
@@ -138,4 +137,3 @@ The production_status field gives a quick glance on whether the gem should be us
 [16]: https://help.github.com/articles/searching-issues/
 [17]: https://codeship.com/
 [18]: https://travis-ci.org/
-[naming]: "#Naming Conventions"
