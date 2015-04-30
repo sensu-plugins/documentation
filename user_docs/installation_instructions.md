@@ -17,10 +17,10 @@ gem cert --add <(curl -Ls https://raw.githubusercontent.com/sensu-plugins/sensu-
 gem install sensu-plugins-disk-checks -P MediumSecurity
 ```
 
-You can also download the key from /certs/ within each repository.
+You can also download the key from certs/ within each repository.
 
 **Note:**
-If the gem has an alpha tag then you will need to use *--prerelease* argument or the gem will not be found.
+If the gem has an alpha tag then you will need to use the *--prerelease* flag or the gem will not be found.
 
 #### Bundler
 

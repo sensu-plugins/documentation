@@ -11,7 +11,7 @@ GIthub and the issues and milestones within it are the primary way the project i
 * Owners - unrestricted access to the org and all repos
 * Admins - write access to all repos except core infrastructure
 * Contributors - write access to all plugin repos
-* Core Infra - write access to sensu-plugin, sensu-plugin-spec, GIR, sensu-plugin.github.io
+* Core Infra - write access to sensu-plugin, sensu-plugin-spec, GIR, Kryten, sensu-plugin.github.io, and tom_servo
 * Documentation - write access to the documentation repo
 
 #### Trello
@@ -21,7 +21,6 @@ There is a public Trello [organization](https://trello.com/sensuplugins) that ha
 #### [sensu-plugin.github.io](http://sensu-plugins.github.io/)
 
 This is our temporary home until a more robust one can be created.
-
 
 ### Policies
 
