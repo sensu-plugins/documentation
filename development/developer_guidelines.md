@@ -2,8 +2,8 @@
 
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Naming Conventions](#)
-- [Coding Style](#)
+- [Naming Conventions](#naming-conventions)
+- [Coding Style](##coding-style)
 - [Copyright and Licensing](#)
 - [Documentation](#)
 	- [Changelog](#)
