@@ -16,7 +16,7 @@ The thought here is to have a central location where other companies and individ
 
 One of the big pushes will be for arch independent code.  A short coming of other major monitoring solutions is the lack of real platform independence.  This is a high priority and is something that is always in consideration.  Many of the disk and process checks have already been refactored to achieve this and more are in progress.
 
-There will always be platform dependent checks such as linux kernel monitors or Windows event monitors but the more the number of these can be reduced the better.
+There will always be platform dependent checks such as linux kernel monitors or Windows event monitors but the more the number of these that can be reduced the better.
 
 **Wider Platform Testing**
 
@@ -38,6 +38,10 @@ Due to constraints with Travis we are only able to run automated tests against O
 
 Due to the scope of this and the resources necessary, it will be a long time coming but talks around this are slowly becoming action.
 
+**Official BSD Support**
+
+Ruby is just ruby, is should not matter the platform.  With that being said support for sensu-plugins on FreeBSD9.2 and 10.1 is coming shortly.  Several of the repo' have Vagrantboxes for these platforms, so one could test functionality on their own before installing the gem in their environment.
+
 ### Website
 
 **Plugin Directory**
@@ -50,13 +54,17 @@ There is still a lot of talk going on around this but Travis, GH hooks, and sina
 
 With the split of the community repo in ~150 separate repos, users may have a hard time finding a particular monitor or know that a monitor or handler for a service already exists. It would be nice for a user to be able to query a db and get back a list of gems to install to monitor their system. For example a user wants to setup baseline monitoring but has no idea what to install for gems. They would type in baseline and get back a list of packages whose metadata matches baseline.
 
+<<<<<<< HEAD
 There is still a lot of talk going on around this but Travis, GH hooks, and sinatra and fairly high on the tool list.  I persoanlly, @mattjones, would love to use golang for this and the directory but that may be extreme overkill.
+=======
+There is still a lot of talk going on around this but Travis, GH hooks, and sinatra and fairly high on the tool list.
+>>>>>>> add docs
 
 Note:  I personally, @mattjones, **hate** gui configuration management tools and this almost falls in the realm of it but if done properly and effectively it could avoid becoming a beast of burden that needs to be put to sleep.  I leave it up to the community to figure out what they want.  I just know there has to be a better way.
 
 ### Help Wanted
 
-Grab a repo and come play.  If you have another thought on something related then by all means reach out to someone on the team. Unitl then
+Grab a repo and come play.  If you have another thought on something related then by all means reach out to someone on the team. Until then
 
 much #monitoringlove,
 

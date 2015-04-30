@@ -1,16 +1,16 @@
 ## Naming Conventions
 
-* All binaries should start with either **handler**, **check**, **metrics**, **extension**, or **mutator** depending on their primary function.  This is done to ensure that a user can tell from the command what the primary action of the script is.  It also makes things eaiser for infrastructure tools.
+* All binaries should start with either **handler**, **check**, **metrics**, **extension**, or **mutator** depending on their primary function.  This is done to ensure that a user can tell from the command what the primary action of the script is.  It also makes things easier for infrastructure tools.
 
-* Please format the names of scripts using dashes to separate words and with an extension (`.rb`, `.sh`, etc), and make sure they are `chmod +x`'d. Extensions are unfortunately necessary for Sensu to be able to directly exec plugins and handlers on Windows.  There is a rake task that is run by travis that will automatically make all files in */bin* executable.
+* The name's of scripts should use dashes to separate words and contain an extension (`.rb`, `.sh`, etc).  Extensions are unfortunately necessary for Sensu to be able to directly exec plugins and handlers on Windows.  All scripts should also be made executable using `chmod +x plugin` or a similar method.  There is a rake task that is run by Travis that will automatically make all files in */bin* executable if this is not done.
 
-* Any repos created need to follow te format of *sensu-plugins-app*, where *app* is the group name such as windows, disk-checks, or influxdb.  The exception to the rule are repos used for the site or tooling such as GIR or sensu-plugins.github.io.  This is done so that the rake tasks and other automation tools can easily parse Github and effectively work with the ~150+ repos.
+* Any repos created need to follow the format of *sensu-plugins-app*, where *app* is the group name such as windows, disk-checks, or influxdb.  The exception to the rule are repos used for the site or tooling such as GIR or sensu-plugins.github.io.  This is done so that the rake tasks and other automation tools can easily parse Github and effectively work with the ~150+ repos.
 
 ## Coding Style
 
-* When developing your plugins please use the [sensu plugin class][1].  This will ensure that all plugins have an identical run structure.
+* When developing plugins please use the [sensu plugin class][1], this ensures all plugins have an identical run structure.
 
-* When using options please use the following structure.  At the very least your option needs to include a description to assist the user with configuration and deployment.
+* When using options please use the following structure.  At the very least the option needs to include a description to assist the user with configuration and deployment.
 
 ```ruby
 option :port,
@@ -50,15 +50,19 @@ default: '1234'
 #
 ```
 
+## Copyright and Licensing
+
+The preferred license for all code associated with the project is the [MIT License][15], other compatible licenses can certainly be looked at by the community as whole.
+
+Any code that is written is owned by the developer and as such the copyright, if they desire, should be set to themselves.  This is an open source project and built upon the collective code of all who contribute, no one person or entity owns everything.  If for whatever reason they wish to not assign copyright to themselves then it can be assigned to *sensu-plugins*
+
 ## Documentation
 
-All documentation will be handled by [Yard][2] and using the default markup at this time. A brief introduction to Yard markup can be found [here][3]. All scripts should have as much documentation coverage as possible, ideally 100%.  You can test your coverage by installing Yard locally and running
+All documentation will be handled by [Yard][2] using the default markup at this time. A brief introduction to Yard markup can be found [here][3]. All scripts should have as much documentation coverage as possible, ideally 100%.  Coverage can be tested by installing Yard locally and running
 
 ```bash
 rake yard
 ```
-
-Documentation can always be made better, if you would like to contribute to it, have at it and submit a PR.
 
 ### Changelog
 
@@ -68,85 +72,56 @@ The change log should follow the format listed [here](http://keepachangelog.com/
 
 Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin/handler file.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  If you have questions about using a specific gem feel free to ask.
 
-## Vagrant Boxes
+## Dependency Management
 
-There is a [Vagrantfile][4] in each repo with shell provisioning that is capable of seting up  the major versions of Ruby using RVM and a sensu gemset for each if you wish to use it.  To get started install [Vagrant][5] then type `vagrant up` in the root directory of the repo or using [GIR][11] typee `rake vagrant:up plugin=<app>` from the PROJECT_DIRECTORY.  Once it is up type `vagrant ssh` or `rake vagrant:up plugin=<app>` to remote into the box and then `cd /vagrant && bundle install` to set all necessary dependencies.
-
-The box currently defaults to Ruby 2.1.4 but 1.9.3 and 2.0.0 are available for installation as well, just uncomment them from the install script.  See the file comments for further details.
-
-## Testing
-
-### Linting
-
-**Only pull requests passing Rubocop will be merged.**
-
-Rubocop is used to lint the ruby plugins. This is done to standardize the style used within these plugins and ensure high quality code.  Most [current rules][6] are in effect.  No linting is done on Ruby code prior to version 2x.  See the [.travis.yml][7] and [Rakefile][8] templates in GIR as they are autogenerated upon initial repo creation and may be updated at any given time.
-
-Ruby 1.9.2 and 1.8.7 support has been dropped, the plugins may still function with these versions but no tests will be run against them nor will code, such as hashes, be specifically written or enforced to ensure backwards compatibility.
-
-You can test rubocop compliance for yourself by installing the gem and running `rake test:rubocop plugin=<app>` from the PROJECT_DIRECTORY.  Running `rake test:rubocop_fix plugin=<app>` will attempt to autocorrect any issues, saving yourself considerable time in large files.
-
-If it truly makes sense for your code to violate a rule you can disable that rule with your code by either using
-
-```ruby
-# rubocop:disable <rule>, <rule>
-```
-
-at the end of the line in violation or
-
-```ruby
-rubocop:disable <rule>, <rule>
-<code block>
-rubocop:enable <rule>, <rule>
-```
-
-If you use either of these methods please mention in the PR as this should be kept to an absolute minimum, at times this can be necessary, especially concerning method length and complexity.
-
-### Rspec
-
-Currently we have RSpec3 as a [test framework][9]. Please add coverage for your check.  Checks will not be considered production grade and stable until they have complete coverage.
-
-You can use the included Vagrantfile for easy testing.  All necessary versions of Ruby can be installed with their own dedicated gem sets using RVM.  Just boot up the machine and drop into /vagrant and execute
-
-```bash
-rake default
-```
-
-to run all specs and rubocop tests.  RSpec tests are currently run against 2.0, and 2.1.  There are currently no plans to support 1.8.x or test against 1.9.2 and 1.9.3.
-
-This is little bit hard almost impossible for non-ruby checks. Let someone from [team][10] know and maybe can can help.
+Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  Questions about using a specific gem feel can be opened as issues on Github or feel free to ask the mailing list.
 
 ## Issue and Pull Request Submissions
 
-If you see something wrong or come across a bug please open up an issue.  Try to include as much data in the issue as possible.  If you feel the issue is critical than tag a team member and we will respond as soon as is feasible.
+If you see something wrong or come across a bug please open up an issue, try to include as much data in the issue as possible.  If you feel the issue is critical than tag a team member and we will respond as soon as is feasible.
 
-When submitting a pull request please follow the guidelines below for the quickest possible merge.  These not only make our lives easier, but also keep the repo and commit history as clean as possible.
+Pull request should follow the guidelines below for the quickest possible merge.  These not only make our lives easier, but also keep the repo and commit history as clean as possible.
 
-* When at all possible do a  `git pull --rebase` or use [GIR][11] `rake git:pull plugin=<app>` which defaults to rebase, both before you start working on the repo and then before you commit.  This will help ensure you have the most up to date codebase, Rubocop rules, and documentation.  It will also go along way towards cutting down or eliminating(hopefully) annoying merge commits.
+* When at all possible do a  `git pull --rebase` both before you start working on the repo and then before you commit.  This will help ensure the most up to date codebase, Rubocop rules, and documentation is available.  It will also go along way towards cutting down or eliminating(hopefully) annoying merge commits.
 
-If you wish to track the status of your PR or issue, check out our [waffle.io][12].  This single location will allow contributors to stay on top of interwinding issues more effectively.  As the number of repositories grow and issues cross those bounds this will be the main organizational tool for tracking.
+Tracking the status of your PR or issue, or seeing all open tickets in the org regardless of repo is simple using Github [filters][16].  To get started click on the Github logo in the upper left and select either *Pull Requests* or *Issues*.  In the search box you will see several terms predefined for you, change **author:name** to **user:sensu-plugins** to see across the entire org.
 
-Please do not not abandon your pull request, only you can help us merge it. We will wait for feedback from you on your pull request for up to 60 days. A lack of feedback in after this may require you to re-open your pull request.  
+Please do not not abandon your pull request, only you can help us merge it. We will wait for feedback from you on your pull request for up to sixty days. A lack of feedback in after this may require you to re-open your pull request.  
 
-## Technical Debt
+## Gem Metadata
 
-For those who don't deal with or understand technical debt, it is debt incurred when designing or developing software.  All the #FIXME, #HACK, etc littered through a script add up over time, this is your technical debt.
+Each gem has metadata that can easily be queried and is designed to allow a user or contributor to get a good quick read on the current status of the gem and how stable it is.  This functions much like the Milestone idea that Logstash plugins are built around, thanks goes out to @hatt for suggesting this.  
 
-When working on the code if you see an issue and can't fix it right away then tage it either #YELLOW, #ORANGE, or #RED based upon the below guidelines.  This will allow yourself or other to come back later when they have some available cycles.
+`s.metadata = { 'maintainer' => ''}`
 
-### Technical Debt Levels
+The maintainer field can be anyone, feel free to reach out to the team about adding your github handle to the gem and assuming 'ownership' of it.  Many of these plugins require specialized knowledge and by their very nature many people depend upon them to be high quality.
 
-**YELLOW**
+`s.metadata               = { 'development_status' => ''}`
 
-* simple issues that require basic Ruby and no more than 4 hours to fix
+The development_status filed allows users know the development state of a plugin:
 
-**ORANGE**
+**active** => active development is on going by a developer or maintainer
 
-* these may require 4 - 8 hours but still only a basic or intermediate Ruby skillset
+**maintenance** => no active refactoring or development but someone is watching out for any new pr's or things to do.
 
-**RED**
+**unmaintained** => the community as a whole is keeping an eye on this but no one has staked a claim to it (most plugins will end up here)
 
-* may require 8+ hours or some domain specific Ruby skills such as Amazon, or Elastic Search
+s.metadata = { 'production_status' => ''}
+
+The production_status field gives a quick glance on whether the gem should be used for production grade monitoring or if some review and care should be taken.
+
+**production grade** => near 100% rspec and yardoc coverage
+
+**stable - review recommended** => incomplete rspec and yardoc coverage
+
+**stable - review required** => little/no rspec and/or yardoc coverage
+
+**unstable - testing recommended** => throw stuff at the wall and hope it sticks (currently most gems are here)
+
+### Additional Information
+
+[Testing](../infra/testing.md)
+[Build and Release Tools and Pipeline](../infra/b_and_r.md)
 
 [1]: https://github.com/sensu/sensu-plugin
 [2]: http://yardoc.org/
@@ -160,3 +135,9 @@ When working on the code if you see an issue and can't fix it right away then ta
 [10]: https://github.com/orgs/sensu-plugins/people
 [11]: http://sensu-plugins.github.io/development/gir
 [12]: https://waffle.io/sensu-plugins/sensu-plugins.github.io
+[13]: https://github.com/sensu-plugins/documentation
+[14]: https://github.com/sensu-plugins/documentation/blob/master/tools/gir_v2.md
+[15]: http://opensource.org/licenses/MIT
+[16]: https://help.github.com/articles/searching-issues/
+[17]: https://codeship.com/
+[18]: https://travis-ci.org/

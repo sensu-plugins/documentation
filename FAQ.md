@@ -14,7 +14,7 @@ One of the conditions for dropping the prerelease or alpha tag will be a complet
 
 **Why did you change the filenames and why name them this way**
 
-One of the overriding issues is that there should be a standard naming scheme for the entire framework.  It is very hard to effectively automate something if the pieces are scattered or named differently.  As of now *plugin* is here to stay, there is still some debate whether a check is different from a metric and should be named so, a decision will be forthcoming soon.
+One of the overriding issues is that there should be a standard naming scheme for the entire framework.  It is very hard to effectively automate something if the pieces are scattered or named differently.  As of now *plugin* is here to stay.
 
 **What about tests, how do I know a plugin works as designed**
 
@@ -30,7 +30,7 @@ No!  It will be frozen in place at a date TBD, most likely sometime this summer 
 
 **How should I deploy the new plugins**
 
-If a gem exists then that would be the best way.  Instructions for installing it can be found in the README of the repo.  If no gem exists yet, then you can attempt to build one based upon the gemspec.  You can also install straight from source.
+If a gem exists then that would be the best way.  Instructions for installing it can be found in the README of the repo or [here][3].  If no gem exists yet, then you can attempt to build one based upon the gemspec.  You can also install straight from source.
 
 All repos have releases, you can just download the latest tarball or zip file, cloning the master branch is not recommended, supported and never will be.  Unless it's a breaking change, the repo will not contain feature branches, everything will be pushed to master.  You have been warned.
 
@@ -64,9 +64,9 @@ Details are in .rubocop.yml within the root of each repo and in the [developer g
 
 **What do you use for testing**
 
-Thats up for debate still, if you have thoughts drop us a line
-
+RSpec
 
 
 [1]: https://github.com/sensu-plugins/sensu-plugins-disk-checks
 [2]: development/developer_guidelines.md
+[3]: user_docs/installation_instructions.md
