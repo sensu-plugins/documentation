@@ -50,12 +50,11 @@ This pipeline is run upon any commits to the master branch including Pull Reques
 # Deploy the needed keys
 cd /tmp
 git clone --depth 1 git@github.com:sensu-plugins/tom_servo.git
-cd /tom_servo
-rake keys:keydrop
+cd tom_servo
+rake setup:setup_env
 cd ~/clone
 #
 # Setup the desired Ruby environments
-#
 # Ruby 1.9.3
 rvm use 1.9.3 --install
 gem install bundler
@@ -68,6 +67,11 @@ bundle install
 #
 # Ruby 2.1
 rvm use 2.1 --install
+gem install bundler
+bundle install
+#
+# Ruby 2.2
+rvm use 2.2 --install
 gem install bundler
 bundle install
 ```
@@ -88,6 +92,12 @@ gem install *.gem
 #
 # Ruby 2.1
 rvm use 2.1
+bundle exec rake default
+gem build *.gemspec
+gem install *.gem
+#
+# Ruby 2.2
+rvm use 2.2
 bundle exec rake default
 gem build *.gemspec
 gem install *.gem
