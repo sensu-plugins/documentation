@@ -52,7 +52,7 @@ We will target the latest the EOL Ruby, currently that is 1.9.3
 
 **What versions or Ruby do you test against**
 
-1.9.3, 2.0.0, 2.1.4
+1.9.3, 2.0, 2.1, 2.2
 
 Note: Linting is not done against 1.9.3
 
