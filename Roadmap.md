@@ -54,11 +54,7 @@ There is still a lot of talk going on around this but Travis, GH hooks, and sina
 
 With the split of the community repo in ~150 separate repos, users may have a hard time finding a particular monitor or know that a monitor or handler for a service already exists. It would be nice for a user to be able to query a db and get back a list of gems to install to monitor their system. For example a user wants to setup baseline monitoring but has no idea what to install for gems. They would type in baseline and get back a list of packages whose metadata matches baseline.
 
-<<<<<<< HEAD
-There is still a lot of talk going on around this but Travis, GH hooks, and sinatra and fairly high on the tool list.  I persoanlly, @mattjones, would love to use golang for this and the directory but that may be extreme overkill.
-=======
-There is still a lot of talk going on around this but Travis, GH hooks, and sinatra and fairly high on the tool list.
->>>>>>> add docs
+There is still a lot of talk going on around this but Travis, GH hooks, and sinatra and fairly high on the tool list. I, @mattyjones, would love to use golang for this and the directory but that may be extreme overkill.
 
 Note:  I personally, @mattjones, **hate** gui configuration management tools and this almost falls in the realm of it but if done properly and effectively it could avoid becoming a beast of burden that needs to be put to sleep.  I leave it up to the community to figure out what they want.  I just know there has to be a better way.
 
