@@ -104,7 +104,7 @@ The development_status filed allows users know the development state of a plugin
 
 **unmaintained** => the community as a whole is keeping an eye on this but no one has staked a claim to it (most plugins will end up here)
 
-s.metadata = { 'production_status' => ''}
+`s.metadata = { 'production_status' => ''}`
 
 The production_status field gives a quick glance on whether the gem should be used for production grade monitoring or if some review and care should be taken.
 
