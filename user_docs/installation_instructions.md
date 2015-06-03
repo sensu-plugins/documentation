@@ -46,7 +46,7 @@ end
 
 ## Usage
 
-In a proper gem environment plugins can be executed directly from the command line. If you want to check the disk usage you could use the **check-disk-usage** plugin.
+In a proper gem environment plugins can be executed directly from the command line. If you want to check the disk usage you could use the **check-disk-usage** plugin.  This will only work for ruby scripts.  Scripts in other langauges will still need to be called directly do to binstubs not being automatically created.
 
 `check-disk-usage.rb -w 80 -c 90`
 
