@@ -82,6 +82,7 @@ If you see something wrong or come across a bug please open up an issue, try to 
 
 Pull request should follow the guidelines below for the quickest possible merge.  These not only make our lives easier, but also keep the repo and commit history as clean as possible.
 - When at all possible do a  `git pull --rebase` both before you start working on the repo and then before you commit.  This will help ensure the most up to date codebase, Rubocop rules, and documentation is available.  It will also go along way towards cutting down or eliminating(hopefully) annoying merge commits.
+- Please update the CHANGELOG following the standard conventions.  This makes our lives eaiser and increases the accuracy of the codebase.
 
 Tracking the status of your PR or issue, or seeing all open tickets in the org regardless of repo is simple using Github [filters][16].  To get started click on the Github logo in the upper left and select either _Pull Requests_ or _Issues_.  In the search box you will see several terms predefined for you, change **author:name** to **user:sensu-plugins** to see across the entire org.
 
