@@ -1,7 +1,7 @@
 ---
 layout: documentation
 # permalink:
-title: Sensu Plugins Deployment Tools
+title: Deployment Tools
 categories: Development
 tags:
   - no_menu
