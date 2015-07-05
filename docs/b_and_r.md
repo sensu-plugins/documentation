@@ -2,7 +2,8 @@
 layout: documentation
 # permalink:
 title: Build And Release Pipeline
-categories: Development
+doc_cat:
+  - Development
 tags:
   - no_menu
 ---

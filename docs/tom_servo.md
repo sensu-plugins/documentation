@@ -2,7 +2,8 @@
 layout: documentation
 # permalink:
 title: Deployment Tools
-categories: Development
+doc_cat:
+  - Development
 tags:
   - no_menu
 ---
@@ -11,3 +12,4 @@ tags:
 ## Tom Servo
 
 [Tom Servo](https://github.com/sensu-plugins/tom_servo/blob/master/README.md) is our testing and deployment tool.  His job is top make our lives easy.  All deployment scripts, code, and tooling will be handled by him.
+

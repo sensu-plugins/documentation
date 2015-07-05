@@ -2,7 +2,8 @@
 layout: documentation
 # permalink:
 title: Sensu Plugins Roadmap
-categories: Overview
+doc_cat:
+  - Infrastructure
 tags:
   - no_menu
 ---

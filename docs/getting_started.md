@@ -2,7 +2,8 @@
 layout: documentation
 # permalink:
 title: Getting Started
-categories: Development
+doc_cat:
+  - Development
 tags:
   - no_menu
 ---
