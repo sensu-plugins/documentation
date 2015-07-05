@@ -9,11 +9,11 @@ tags:
 ---
 **Why did you split the repos**
 
-This was done to simplify the deployment and delivery process.  When working with a repo as diverse as the community-plugins it's very hard to version and deploy in the methods that we all would like.  Splitting the repo into smaller pieces makes this much easier and more manageable in the long run.
+This was done to simplify the deployment and delivery process.  When working with a repo as diverse as the community-plugins it's very hard to version and deploy it in the methods that we all would like.  Splitting the repo into smaller pieces makes this much easier and more manageable in the long run.
 
 **Why are the repos named this way**
 
-The repos are named based up the application, product, or function they are associated with.  This means that if you use apache, you need only install the *sensu-plugins-apache* gem or clone the repo.  When it comes to handlers, extensions, and mutators the same convention was used so that in the future if a check or extension is added the repo name won't change.  *Sensu-plugins-pagerduty* is a great example, it may only contain handlers at this time but if in the future we want to add a check of an endpoint we don't need to do anything more than bump the version and update the docs.
+The repos are named based up the application, product, or function they are associated with.  This means that if you use apache, you need only install the *sensu-plugins-apache* gem or clone the repo.  When it comes to handlers and mutators the same convention was used so that in the future if a check is added the repo name won't change.  *Sensu-plugins-pagerduty* is a great example, it may only contain handlers at this time but if in the future we want to add a check of an endpoint we don't need to do anything more than bump the version and update the docs.
 
 Besides having a standard naming convention makes automation and deployment tools very happy and we all use them right?
 
@@ -23,7 +23,7 @@ One of the conditions for dropping the prerelease or alpha tag will be a complet
 
 **Why did you change the filenames and why name them this way**
 
-One of the overriding issues is that there should be a standard naming scheme for the entire framework.  It is very hard to effectively automate something if the pieces are scattered or named differently.  As of now *plugin* is here to stay.
+One of the overriding issues is that there should be a standard naming scheme for the entire framework.  It is very hard to effectively automate something if the pieces are scattered or named differently.  As of now the current names are here to stay.
 
 **What about tests, how do I know a plugin works as designed**
 
@@ -35,7 +35,7 @@ The readme will contain sample configs and commands.  Many of the plugins also h
 
 **Will the community-plugins repo be deleted and if so when**
 
-No!  It will be frozen in place at a date TBD, most likely sometime this summer although that is a moving target and dependent upon a lot of things.
+No!  It will be frozen in place at a date TBD, most likely sometime Fall 2015 although that is a moving target and dependent upon a lot of things.
 
 **How should I deploy the new plugins**
 
@@ -77,5 +77,5 @@ RSpec
 
 
 [1]: https://github.com/sensu-plugins/sensu-plugins-disk-checks
-[2]: development/developer_guidelines.md
-[3]: user_docs/installation_instructions.md
+[2]: http://sensu-plugins.io/docs/developer_guidelines.html
+[3]: http://sensu-plugins.io/docs/installation_instructions.html

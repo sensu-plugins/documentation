@@ -66,11 +66,11 @@ A committer who has read access to all public and private repos including these 
 
 Any member of this group must also provide a voice number that they can be reached at.  Due to the widespread permissions, security practices are heavily enforced and any compromises must be dealt with immediately.
 
-* committer
+**committer**
 
 A commiter who has push access to all repos in their team.  See above for a list of teams
 
-* contributor
+**contributor**
 
 A Github user who has had one or more merges commited to any repo but does not yet have push access to a team.
 
