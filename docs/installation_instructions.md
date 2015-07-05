@@ -33,7 +33,7 @@ You can also download the key from certs/ within each repository.
 **Note:**
 If the gem has an alpha tag then you will need to use the *--prerelease* flag or the gem will not be found.
 
-#### Bundler
+#### Bundle
 
 Add *sensu-plugins-disk-checks* to your Gemfile and run `bundle install` or `bundle update`
 

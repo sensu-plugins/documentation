@@ -8,7 +8,6 @@ tags:
   - no_menu
 ---
 
-
 ## Testing
 
 ### Linting
@@ -16,8 +15,8 @@ tags:
 **Only pull requests passing Rubocop will be merged.**
 
 Rubocop is used to lint the ruby plugins. This is done to standardize the style used within these plugins and ensure high quality code.  Most [current rules][6] are in effect.  
-No linting is done on Ruby code prior to version 2x.  See the [.travis.yml][7] and [Rakefile][8] templates in GIR as they are auto-generated upon initial repo creation and may be updated at any given time.
-
+No linting is done on Ruby code prior to version 2x. 
+ 
 Ruby 1.9.2 and 1.8.7 support has been dropped, the plugins may still function with these versions but no tests will be run against them nor will code, such as hashes, be specifically written or enforced to ensure backwards compatibility.
 
 Rubocop compliance can be checked by installing the gem and running `rubocop` with the repo.  Running `rubocop -a` will attempt to autocorrect any issues, saving considerable time in large files.
@@ -139,6 +138,7 @@ rvm:
   - 1.9.3
   - 2.0
   - 2.1
+  - 2.2
 notifications:
   email:
     recipients:

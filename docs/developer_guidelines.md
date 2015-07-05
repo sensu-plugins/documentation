@@ -23,9 +23,9 @@ tags:
 - [Additional Information](#additional-information)
 
 ## Naming Conventions
-- All binaries should start with either **handler**, **check**, **metrics**, **extension**, or **mutator** depending on their primary function.  This is done to ensure that a user can tell from the command what the primary action of the script is.  It also makes things easier for infrastructure tools.
-- The name's of scripts should use dashes to separate words and contain an extension (`.rb`, `.sh`, etc).  Extensions are unfortunately necessary for Sensu to be able to directly exec plugins and handlers on Windows.  All scripts should also be made executable using `chmod +x plugin` or a similar method.  There is a rake task that is run by Travis that will automatically make all files in _/bin_ executable if this is not done.
-- Any repos created need to follow the format of _sensu-plugins-app_, where _app_ is the group name such as windows, disk-checks, or influxdb.  The exception to the rule are repos used for the site or tooling such as GIR or sensu-plugins.github.io.  This is done so that the rake tasks and other automation tools can easily parse Github and effectively work with the ~150+ repos.
+- All binaries should start with either **handler**, **check**, **metrics**, or **mutator** depending on their primary function.  This is done to ensure that a user can tell from the command what the primary action of the script is.  It also makes things easier for infrastructure tools.
+- The name's of scripts should use dashes to separate words and contain an extension (`.rb`, `.sh`, etc).  Extensions are unfortunately necessary for Sensu to be able to directly exec plugins and handlers on Windows.  All scripts should also be made executable using `chmod +x plugin` or a similar method.  There is a rake task that is run by Codeship that will automatically make all files in _/bin_ executable if this is not done.
+- Any repos created need to follow the format of *sensu-plugins-app*, where *app* is the name such as windows, disk-checks, or influxdb.  The exception to the rule are repos used for the site or tooling such as GIR or sensu-plugins.github.io.  This is done so that the rake tasks and other automation tools can easily parse Github and effectively work with the 150+ repos.
 
 ## Coding Style
 - When developing plugins please use the [sensu plugin class][1], this ensures all plugins have an identical run structure.
@@ -69,10 +69,12 @@ default: '1234'
 #
 ```
 
+When at all possible preference is given to pure Ruby implementations.  There should only be system or platform dependencies in the specific gems that use them such as *sensu-plugins-windows*.
+
 ## Copyright and Licensing
 The preferred license for all code associated with the project is the [MIT License][15], other compatible licenses can certainly be looked at by the community as whole.
 
-Any code that is written is owned by the developer and as such the copyright, if they desire, should be set to themselves.  This is an open source project and built upon the collective code of all who contribute, no one person or entity owns everything.  If for whatever reason they wish to not assign copyright to themselves then it can be assigned to _sensu-plugins_
+Any code that is written is owned by the developer and as such the copyright, if they desire, should be set to themselves.  This is an open source project and built upon the collective code of all who contribute, no one person or entity owns everything.  If for whatever reason they wish to not assign copyright to themselves then it can be assigned to *sensu-plugins*.
 
 ## Documentation
 All documentation will be handled by [Yard][2] using the default markup at this time. A brief introduction to Yard markup can be found [here][3]. All scripts should have as much documentation coverage as possible, ideally 100%.  Coverage can be tested by installing Yard locally and running
