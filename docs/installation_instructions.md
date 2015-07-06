@@ -17,7 +17,7 @@ Installing via gem is the preferred method it one exists.
 
 **Standard Installation**
 
-`gem install sensu-plugin-disk-checks`
+`gem install sensu-plugins-disk-checks`
 
 **Secure Installation**
 
