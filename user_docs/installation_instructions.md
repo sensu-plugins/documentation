@@ -47,7 +47,7 @@ end
 
 Using the Chef **package** resource
 ```
-package 'sensu-plugins-disk-checks' do
+gem_package 'sensu-plugins-disk-checks' do
   version '0.0.1'
 end
 ```
