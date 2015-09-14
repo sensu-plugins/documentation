@@ -36,7 +36,6 @@ option :port,
 short: '-p PORT',
 long: '--port PORT',
 description: 'Port',
-default: '1234'
 ```
 
 - Each script should use the following standard header:
@@ -56,7 +55,6 @@ default: '1234'
 #
 # DEPENDENCIES:
 #   gem: sensu-plugin
-#   gem: <?>
 #
 # USAGE:
 #
@@ -102,10 +100,12 @@ Pull request should follow the guidelines below for the quickest possible merge.
 
 Tracking the status of your PR or issue, or seeing all open tickets in the org regardless of repo is simple using Github [filters][16].  To get started click on the Github logo in the upper left and select either _Pull Requests_ or _Issues_.  In the search box you will see several terms predefined for you, change **author:name** to **user:sensu-plugins** to see across the entire org.
 
-Please do not not abandon your pull request, only you can help us merge it. We will wait for feedback from you on your pull request for up to sixty days. A lack of feedback in after this may require you to re-open your pull request.  
+Please do not not abandon your pull request, only you can help us merge it. We will wait for feedback from you on your pull request for up to sixty days. A lack of feedback in after this may require you to re-open your pull request.
+
+If you would like to make a pull request and the repo does not already exist then please feel free to directly contact a member of the team using our public email address or open an issue in the [Feature Request][19] repo and we will create a repo for you. As a general rule if you ask to have a repo created you will also be given write access to it by default.
 
 ## Gem Metadata
-Each gem has metadata that can easily be queried and is designed to allow a user or contributor to get a good quick read on the current status of the gem and how stable it is.  This functions much like the Milestone idea that Logstash plugins are built around, thanks goes out to @hatt for suggesting this.  
+Each gem has metadata that can easily be queried and is designed to allow a user or contributor to get a good quick read on the current status of the gem and how stable it is.  This functions much like the Milestone idea that Logstash plugins are built around, thanks goes out to @hatt for suggesting this.
 
 `s.metadata = { 'maintainer' => ''}`
 
@@ -154,3 +154,4 @@ The production_status field gives a quick glance on whether the gem should be us
 [16]: https://help.github.com/articles/searching-issues/
 [17]: https://codeship.com/
 [18]: https://travis-ci.org/
+[19]: https://github.com/sensu-plugins/sensu-plugins-feature-requests

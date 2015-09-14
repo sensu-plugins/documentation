@@ -34,7 +34,7 @@ Github and the issues and milestones within it are the primary way the project i
 
 **Note**
 
-Members in the Owners or Core Infra team must provide a voie number.  Due to the permissions and far reaching affect of these teams security  practices are heavily enforced and any compromises must be dealt with immediately. 
+Members in the Owners or Core Infra team must provide a voie number.  Due to the permissions and far reaching affect of these teams security  practices are heavily enforced and any compromises must be dealt with immediately.
 
 #### Trello
 
@@ -55,6 +55,12 @@ This is a public organization and as such anyone may join the only requirements 
 
 #### Organization Structure
 
+Becoming a member of each of these groups and teams is a community decision.  You may be invited by any member of the team and the majority of the other team members can approve.  There is no time limit before being invited into a team and no set amount of work that needs to be accomplished once you are in a team.
+
+For security purposes though if you have not made any contributions in the last 6 months, you may be removed from a team and can request access again at any time.
+
+Any membership issues will be resolved by members of the GitHub Owners group after consultation withh all parties and are final.
+
 **core committer**
 
 A committer who has read access to all public and private repos including these specific privilages:
@@ -68,17 +74,10 @@ Any member of this group must also provide a voice number that they can be reach
 
 **committer**
 
-A commiter who has push access to all repos in their team.  See above for a list of teams
+A commiter who has push access to any repos. They can either be a member of a team or be granted rights to specific repos using Github's new org permissions.
 
 **contributor**
 
 A Github user who has had one or more merges commited to any repo but does not yet have push access to a team.
-
-Becoming a member of each of these groups and teams is a community decision.  You may be invited by any member of the team and the majority of the other team members can approve.  There is no time limit before being invited into a team and no set amount of work that needs to be accomplished once you are in a team.
-
-For security purposes though if you have not made any contributions in the last 6 months, you may be removed from a team and can request access again at any time.
-
-Any membership issues will be resolved by members of the GitHub Owners group after consultation withh all parties and are final.
-
 
 

@@ -18,19 +18,19 @@ tags:
 
 GIthub and the issues and milestones within it are the primary way the project is managed.  All plugin repositories are created from a standard template using a rake task to ensure that they remain consistent and manageable at an organization level.  There are currently five teams in the org:
 
-* Owners - unrestricted access to the org and all repos
-* Admins - write access to all repos except core infrastructure
-* Contributors - write access to all plugin repos
-* Core Infra - write access to sensu-plugin, sensu-plugin-spec, GIR, Kryten, sensu-plugin.github.io, and tom_servo
-* Documentation - write access to the documentation repo
+- Owners - unrestricted access to the org and all repos
+- Admins - write access to all repos except core infrastructure
+- Contributors - write access to all plugin repos
+- Core Infra - write access to sensu-plugin, sensu-plugin-spec, GIR, Kryten, sensu-plugin.github.io, and tom_servo
+- Documentation - write access to the documentation repo
 
 #### Trello
 
-There is a public Trello [organization](https://trello.com/sensuplugins) that has several boards used for communicating various project wide items.  This is still a work in progress but it works for now.  Ideas are always welcome, join a board and open a card.
+There is a public Trello [board](https://trello.com/b/QjkJ8CS3/sensu-plugins) used for communicating various project wide items.  This is still a work in progress but it works for now.  Ideas are always welcome.
 
-#### [sensu-plugin.github.io](http://sensu-plugins.github.io/)
+#### [sensu-plugin.io](http://sensu-plugins.io/)
 
-This is our temporary home until a more robust one can be created.
+This is current our home.
 
 ### Policies
 

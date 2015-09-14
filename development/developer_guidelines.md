@@ -22,9 +22,9 @@ tags:
 - [Additional Information](#additional-information)
 
 ## Naming Conventions
-- All binaries should start with either **handler**, **check**, **metrics**, **extension**, or **mutator** depending on their primary function.  This is done to ensure that a user can tell from the command what the primary action of the script is.  It also makes things easier for infrastructure tools.
-- The name's of scripts should use dashes to separate words and contain an extension (`.rb`, `.sh`, etc).  Extensions are unfortunately necessary for Sensu to be able to directly exec plugins and handlers on Windows.  All scripts should also be made executable using `chmod +x plugin` or a similar method.  There is a rake task that is run by Travis that will automatically make all files in _/bin_ executable if this is not done.
-- Any repos created need to follow the format of _sensu-plugins-app_, where _app_ is the group name such as windows, disk-checks, or influxdb.  The exception to the rule are repos used for the site or tooling such as GIR or sensu-plugins.github.io.  This is done so that the rake tasks and other automation tools can easily parse Github and effectively work with the ~150+ repos.
+- All binaries should start with either **handler**, **check**, **metrics** or **mutator** depending on their primary function.  This is done to ensure that a user can tell from the command what the primary action of the script is.  It also makes things easier for infrastructure tools.
+- The name's of scripts should use dashes to separate words and contain an extension (`.rb`, `.sh`, etc).  Extensions are unfortunately necessary for Sensu to be able to directly exec plugins and handlers on Windows.  All scripts should also be made executable using `chmod +x plugin` or a similar method.
+- Any repos created need to follow the format of _sensu-plugins-app_, where _app_ is the group name such as windows, disk-checks, or influxdb.  The exception to the rule are repos used for the site or tooling such as GIR or sensu-plugins.github.io.  This is done so that the rake tasks and other automation tools can easily parse Github and effectively work with the ~170+ repos.
 
 ## Coding Style
 - When developing plugins please use the [sensu plugin class][1], this ensures all plugins have an identical run structure.
@@ -35,7 +35,6 @@ option :port,
 short: '-p PORT',
 long: '--port PORT',
 description: 'Port',
-default: '1234'
 ```
 
 - Each script should use the following standard header:
@@ -55,7 +54,6 @@ default: '1234'
 #
 # DEPENDENCIES:
 #   gem: sensu-plugin
-#   gem: <?>
 #
 # USAGE:
 #
@@ -84,7 +82,7 @@ rake yard
 The change log should follow the format listed [here](http://keepachangelog.com/).  Please keep this changelog up to date, if you make changes to the repo and submit a PR please update the changelog accordingly.  Please follow the guidelines below when updating the changelog with respect to which number to bump.
 
 ## Dependency Management
-Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  Questions about using a specific gem feel can be opened as issues on Github or feel free to ask the mailing list.
+Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  Questions about using a specific gem can be opened as issues on Github or feel free to ask the mailing list.
 
 ## Issue and Pull Request Submissions
 If you see something wrong or come across a bug please open up an issue, try to include as much data in the issue as possible.  If you feel the issue is critical than tag a team member and we will respond as soon as is feasible.
@@ -99,10 +97,10 @@ Pull request should follow the guidelines below for the quickest possible merge.
 
 Tracking the status of your PR or issue, or seeing all open tickets in the org regardless of repo is simple using Github [filters][16].  To get started click on the Github logo in the upper left and select either _Pull Requests_ or _Issues_.  In the search box you will see several terms predefined for you, change **author:name** to **user:sensu-plugins** to see across the entire org.
 
-Please do not not abandon your pull request, only you can help us merge it. We will wait for feedback from you on your pull request for up to sixty days. A lack of feedback in after this may require you to re-open your pull request.  
+Please do not not abandon your pull request, only you can help us merge it. We will wait for feedback from you on your pull request for up to sixty days. A lack of feedback in after this may require you to re-open your pull request.
 
 ## Gem Metadata
-Each gem has metadata that can easily be queried and is designed to allow a user or contributor to get a good quick read on the current status of the gem and how stable it is.  This functions much like the Milestone idea that Logstash plugins are built around, thanks goes out to @hatt for suggesting this.  
+Each gem has metadata that can easily be queried and is designed to allow a user or contributor to get a good quick read on the current status of the gem and how stable it is.  This functions much like the Milestone idea that Logstash plugins are built around, thanks goes out to @hatt for suggesting this.
 
 `s.metadata = { 'maintainer' => ''}`
 
