@@ -34,7 +34,7 @@ Github and the issues and milestones within it are the primary way the project i
 
 **Note**
 
-Members in the Owners or Core Infra team must provide a voie number.  Due to the permissions and far reaching affect of these teams security  practices are heavily enforced and any compromises must be dealt with immediately.
+Members in the Owners or Core Infra team must provide a voice number.  Due to the permissions and far reaching affect of these teams security  practices are heavily enforced and any compromises must be dealt with immediately.
 
 #### Trello
 
@@ -59,7 +59,7 @@ Becoming a member of each of these groups and teams is a community decision.  Yo
 
 For security purposes though if you have not made any contributions in the last 6 months, you may be removed from a team and can request access again at any time.
 
-Any membership issues will be resolved by members of the GitHub Owners group after consultation withh all parties and are final.
+Any membership issues will be resolved by members of the Owners group after consultation with all parties and are final.
 
 **core committer**
 
@@ -74,7 +74,7 @@ Any member of this group must also provide a voice number that they can be reach
 
 **committer**
 
-A commiter who has push access to any repos. They can either be a member of a team or be granted rights to specific repos using Github's new org permissions.
+A commiter who has push access to any repos. They can either be a member of a team or be granted rights to specific repos using Github's contributor org permissions.
 
 **contributor**
 
