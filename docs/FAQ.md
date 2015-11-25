@@ -63,7 +63,7 @@ We will target the latest the EOL Ruby, currently that is 1.9.3
 
 1.9.3, 2.0, 2.1, 2.2
 
-Note: Linting is not done against 1.9.3
+Note regarding 1.9.3: Linting is not done against it, and 1.9.3 will be supported where possible till Feb 2016 which is one year after EOL and 2 years after EOL was announced.
 
 **What do you use for linting**
 
