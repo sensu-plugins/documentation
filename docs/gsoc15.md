@@ -1,13 +1,9 @@
 ---
-layout: documentation
-# permalink:
-title: Sensu Plugins Roadmap
+layout: page
+title: Sensu Plugins GSoC 2015 Ideas
 doc_cat:
   - Development
-tags:
-  - no_menu
 ---
-## Sensu Plugins GSoC 2015 Ideas
 
 Creating a set of production grade gems from the [Sensu Community Plugins][2] is a huge task that will take considerable time; only with the continued effort of many people can this goal can be achieved.
 

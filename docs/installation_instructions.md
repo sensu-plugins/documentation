@@ -1,15 +1,9 @@
 ---
-layout: documentation
-# permalink:
+layout: page
 title: Installation Instructions
 doc_cat:
   - User
-tags:
-  - no_menu
 ---
-
-
-## Installation
 
 ### Gems
 
@@ -64,4 +58,3 @@ Depending on ruby environment you may need to call ruby directly
 `/opt/sensu/embedded/bin/ruby check-disk-usage.rb -w 80 -c 90`
 
 For details check the header file of a given plugin.
-

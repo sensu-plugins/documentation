@@ -1,14 +1,10 @@
 ---
-layout: documentation
+layout: page
 # permalink:
 title: Build And Release Pipeline
 doc_cat:
   - Development
-tags:
-  - no_menu
 ---
-
-## Build and Release Pipeline
 
 Currently we use [Codeship](https://codeship.com/) for deploying plugins in an automated fashion while [Travis](https://travis-ci.org/) is used to run tests across all forks.
 
