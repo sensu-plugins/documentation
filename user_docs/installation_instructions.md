@@ -39,6 +39,7 @@ Add *sensu-plugins-disk-checks* to your Gemfile and run `bundle install` or `bun
 #### Chef
 
 Using the Sensu **sensu_gem** LWRP
+
 ```
 sensu_gem 'sensu-plugins-disk-checks' do
   version '0.0.1'
@@ -46,6 +47,7 @@ end
 ```
 
 Using the Chef **package** resource
+
 ```
 gem_package 'sensu-plugins-disk-checks' do
   version '0.0.1'
