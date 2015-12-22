@@ -1,1 +1,1 @@
-Sensu Plugins Documentation 
+Sensu Plugins Documentation
