@@ -49,6 +49,23 @@ gem_package 'sensu-plugins-disk-checks' do
 end
 ```
 
+#### Puppet
+
+Using the Puppet **sensu_gem** package provider
+
+```
+package { 'sensu-plugins-disk-checks':
+  ensure   => '0.0.1',
+  provider => sensu_gem,
+}
+```
+
+#### Ansible
+
+```
+- gem: name=sensu-plugins-disk-checks version=0.0.1 state=present executable=/opt/sensu/embedded/bin/gem
+```
+
 ## Usage
 
 In a proper gem environment plugins can be executed directly from the command line. If you want to check the disk usage you could use the **check-disk-usage** plugin.  This will only work for ruby scripts.  Scripts in other langauges will still need to be called directly do to binstubs not being automatically created.
