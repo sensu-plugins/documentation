@@ -73,4 +73,3 @@ Grab a repo and come play.  If you have another thought on something related the
 much #monitoringlove,
 
 sensu-plugins admins
-
