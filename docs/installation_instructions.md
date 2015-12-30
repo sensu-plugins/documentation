@@ -7,7 +7,7 @@ doc_cat:
 
 ### Gems
 
-Installing via gem is the preferred method it one exists.
+Installing via gem is the preferred method if one exists.
 
 **Standard Installation**
 
