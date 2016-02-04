@@ -61,6 +61,7 @@ Any membership issues will be resolved by members of the Admin group after consu
 **core committer**
 
 A committer who has read access to all public and private repos including these specific privilages:
+
 * Can push directly to Github and RubyGems
 * Access to the sensu-plugin bot account
 * Access to the slack channel
@@ -73,7 +74,8 @@ A committer who has read access to all public and private repos including these 
 
 A commiter who has push access to all plugin repos. They can either be a member of a team or be granted rights to specific repos using Github's contributor org permissions.
 They also have the following privilages after 6 months of continued effort or a demostrated need:
-* Discount to Tower2 OSX Git Client
+
+i* Discount to Tower2 OSX Git Client
 * Access to DO droplets for testing
 * Open Source License to various Jet Brains IDE's
 * The ability to have an email address `@sensu-plugins.io` (restrictions apply) 
