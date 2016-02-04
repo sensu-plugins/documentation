@@ -6,7 +6,7 @@ doc_cat:
   - Development
 ---
 
-Currently we use [Codeship](https://codeship.com/) for testing and[Travis](https://travis-ci.org/) is used to run tests across all forks and deploying the gems.
+Currently we use [Codeship](https://codeship.com/) for testing and [Travis](https://travis-ci.org/) is used to run tests across all forks and deploying the gems.
 
 When a Pull Request is submitted, Travis will automatically execute all default tasks defined in the `Rakefile` found in the repo root and display the results in the PR.  When a committer wishes to deploy a new release the following procedure should be followed:
 
