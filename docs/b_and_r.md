@@ -6,17 +6,13 @@ doc_cat:
   - Development
 ---
 
-Currently we use [Codeship](https://codeship.com/) for deploying plugins in an automated fashion while [Travis](https://travis-ci.org/) is used to run tests across all forks.
+Currently we use [Codeship](https://codeship.com/) for testing and[Travis](https://travis-ci.org/) is used to run tests across all forks and deploying the gems.
 
 When a Pull Request is submitted, Travis will automatically execute all default tasks defined in the `Rakefile` found in the repo root and display the results in the PR.  When a committer wishes to deploy a new release the following procedure should be followed:
 
 1. ensure all tests pass (the deploy won't happen if this fails)
-1. edit the CHANGELOG.md following the conventions laid out in [Keep A Changelog](http://keepachangelog.com/)
-1. bump the version in *../lib/plugin/version.rb*
-1. commit ONLY those two items with a message of **deploy**
+1. ensure the CHANGELOG.md is updated by the end user following the conventions laid out in [Keep A Changelog](http://keepachangelog.com/)
+1. ensure the version was bumpped in *../lib/plugin/version.rb* by the user
+1. create a release in the gh gui or create a tag and push it. The tag should be the same as the new version. 
 
-This commit must be done against **Master** and not via a PR in order for Codeship to detect it.  At this point Codeship will run all tests and then execute the deploy script which will create a new Github tag/release with the current version and then build and publish a gem of the same version.
-
-### Additional Info
-
-[Tom Servo](https://github.com/sensu-plugins/documentation/blob/master/docs/tom_servo.md)
+All tag commits that pass tests in **all** supported runtimes will kick a deploy to Rubygems.
