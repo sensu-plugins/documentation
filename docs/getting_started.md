@@ -35,7 +35,7 @@ Members in the Owners or Core Infra team must provide a voice number.  Due to th
 
 #### Trello
 
-There is a public Trello [board](https://trello.com/b/QjkJ8CS3/sensu-community-plugins) used for communicating various project wide items.  This is still a work in progress but it works for now.  Ideas are always welcome.
+There is a public Trello [board](https://trello.com/b/QjkJ8CS3/sensu-community-plugins) used for communicating various project wide items. This is still a work in progress but it works for now.  Ideas are always welcome.
 
 #### Website
 
@@ -56,7 +56,7 @@ Becoming a member of each of these groups and teams is an open decision.  You ma
 
 For security purposes though if you have not made any contributions in the last 6 months, you may be removed from a team and can request access again at any time by reaching out and contacting an existing team member.
 
-Any membership issues will be resolved by members of the Admin group after consultation with all parties in a public forumn. If either party feels the issue is not resolved then they may reach out privately or publicly to either Matt Jones or Sean Porter or another member of the Owners group for assistance. Their decisions and are final.
+Any membership issues will be resolved by members of the Admin group after consultation with all parties in a public forumn. If either party feels the issue is not resolved then they may reach out privately or publicly to either Matt Jones or Sean Porter or another member of the Owners group for assistance. Their decisions are final.
 
 **core committer**
 
