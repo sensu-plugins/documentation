@@ -28,9 +28,9 @@ doc_cat:
 
 ```ruby
 option :port,
-short: '-p PORT',
-long: '--port PORT',
-description: 'Port',
+       short: '-p PORT',
+       long: '--port PORT',
+       description: 'Port',
 ```
 
 - Each script should use the following standard header:
@@ -80,7 +80,7 @@ rake yard
 The change log should follow the format listed [here][20].  Please keep this changelog up to date, if you make changes to the repo and submit a PR please update the changelog accordingly.  Please follow the guidelines below when updating the changelog with respect to which number to bump.
 
 ## Dependency Management
-Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  Questions about using a specific gem feel can be opened as issues on Github or feel free to ask the mailing list.
+Dependencies (ruby gems, packages, etc) and other requirements should be declared in the header of the plugin and more importantly in the gemspec.  Try to use the standard library or the same dependencies as other plugins to keep the stack as small as possible.  Questions about using a specific gem feel can be opened as issues on Github or feel free to ask the mailing list.
 
 ## Issue and Pull Request Submissions
 If you see something wrong or come across a bug please open up an issue, try to include as much data in the issue as possible.  If you feel the issue is critical than tag a team member and we will respond as soon as is feasible.
@@ -148,7 +148,6 @@ The production_status field gives a quick glance on whether the gem should be us
 [14]: https://github.com/sensu-plugins/documentation/blob/master/tools/gir_v2.md
 [15]: http://opensource.org/licenses/MIT
 [16]: https://help.github.com/articles/searching-issues/
-[17]: https://codeship.com/
 [18]: https://travis-ci.org/
 [19]: https://github.com/sensu-plugins/sensu-plugins-feature-requests
 [20]: http://keepachangelog.com/
