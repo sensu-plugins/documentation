@@ -56,13 +56,13 @@ No
 
 ### What is the policy on supporting end-of-life(EOL) Ruby versions?
 
-We will target the latest the EOL Ruby, currently that is 1.9.3.
+We will target the latest the EOL Ruby, please check the link below to see current EOL version.
+
+https://www.ruby-lang.org/en/downloads/branches/
 
 ### What versions or Ruby do you test against?
 
-1.9.3, 2.0, 2.1, 2.2
-
-Note: Linting is not done against 1.9.3
+We should always check non EOL versions. Support may not be added yet but ideally that is always true.
 
 ### What do you use for linting?
 
