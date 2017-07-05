@@ -56,13 +56,13 @@ No
 
 ### What is the policy on supporting end-of-life(EOL) Ruby versions?
 
-We will target the latest the EOL Ruby, please check the link below to see current EOL version.
+We will target the latest EOL Ruby version, please check the link below the see the current EOL version.
 
 https://www.ruby-lang.org/en/downloads/branches/
 
 ### What versions or Ruby do you test against?
 
-We should always check non EOL versions. Support may not be added yet but ideally that is always true.
+We strive to test on all non-EOL versions. It can take time to add new versions to all plugins.
 
 ### What do you use for linting?
 
