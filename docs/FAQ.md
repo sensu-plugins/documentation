@@ -56,7 +56,7 @@ No
 
 ### What is the policy on supporting end-of-life(EOL) Ruby versions?
 
-We will target the latest EOL Ruby version, please check the link below the see the current EOL version.
+We will target all non EOL Ruby versions, please check the link below the see the current EOL version.
 
 https://www.ruby-lang.org/en/downloads/branches/
 
